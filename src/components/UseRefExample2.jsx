@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 function UseRefExample2() {
   const [name, setName] = useState("");
 
-  const renders = useRef(1);
+  const renders = useRef(1); // set a reference to the number of renders
   const prevName = useRef("");
 
   useEffect(() => {
