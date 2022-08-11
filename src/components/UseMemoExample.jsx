@@ -4,6 +4,9 @@ export const UseMemoExample = () => {
   const [number, setNumber] = useState(0);
   const [inc, setInc] = useState(1);
 
+  // const sqrt = getSqrt(number);
+  // whithout useMemo, getSqrt fn is called even if the number state is not changed
+
   const sqrt = useMemo(() => getSqrt(number), [number]);
   const renders = useRef(1);
   useEffect(() => {
