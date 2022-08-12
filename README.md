@@ -50,8 +50,8 @@
 - the stored data is saved across browser sessions.
 - it is similar to sessionStorage, except that while localStorage data has no expiration time, sessionStorage data gets cleared when the page session ends — that is, when the page is closed.
 
-#JSON.Stringify() - Converts a JavaScript object or value to a JSON string.
-#JSON.parse() - Converts a JavaScript Object Notation (JSON) string into an object.
+##JSON.Stringify() - Converts a JavaScript object or value to a JSON string.
+##JSON.parse() - Converts a JavaScript Object Notation (JSON) string into an object.
 
 # Getting Started with Create React App
 
