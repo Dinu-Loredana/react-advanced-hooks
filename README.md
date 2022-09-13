@@ -1,5 +1,12 @@
 # Notes
 
+### HOC (Higher Order Component)
+
+- to share common functionality (logic) between components; generally used when multiple components use a common logic
+- a function that takes a React component as input and returns an enhanced version of it as output component. It builds up on the principle of higher order functions in JavaScript: A function that returns a function. It typically adds extra logic (adds functionality) to return a new enhanced component
+- naming convension for HOC: use the prefix with (same as a React Hook comes always with the prefix use), use camelCase for the name (e.g. withCounter)
+-
+
 ### useRef hook
 
 - create a reference to a DOM element in a functional component (can be refer to an input, paragraph, any HTML element)

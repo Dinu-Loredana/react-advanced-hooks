@@ -3,7 +3,10 @@
 // import { UseMemoExample } from "./components/UseMemoExample";
 // import { UseCallbackExample } from "./components/UseCallbackExample";
 // import { CustomHookExample1 } from "./components/CustomHookExample1";
-import { CustomHookExample2 } from "./components/CustomHookExample2";
+// import { CustomHookExample2 } from "./components/CustomHookExample2";
+
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
 
 function App() {
   return (
@@ -13,7 +16,9 @@ function App() {
       {/* <UseMemoExample /> */}
       {/* <UseCallbackExample /> */}
       {/* <CustomHookExample1 /> */}
-      <CustomHookExample2 />
+      {/* <CustomHookExample2 /> */}
+      <ClickCounter />
+      <HoverCounter />
     </div>
   );
 }
