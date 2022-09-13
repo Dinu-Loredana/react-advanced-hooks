@@ -17,7 +17,7 @@ function App() {
       {/* <UseCallbackExample /> */}
       {/* <CustomHookExample1 /> */}
       {/* <CustomHookExample2 /> */}
-      <ClickCounter />
+      <ClickCounter randomProps="HOC with Props | " />
       <HoverCounter />
     </div>
   );

@@ -3,7 +3,7 @@ import { Component } from "react";
 // withCounter - HOC
 // starts with 'with' and not using PascalCase, but camelCase because it's a function
 
-const withCounter = (WrappedComponent) => {
+const withCounter = (WrappedComponent, incrementNo) => {
   // takes in original compononent (WrappedComponent)
 
   class WithCounter extends Component {
@@ -17,16 +17,18 @@ const withCounter = (WrappedComponent) => {
 
     incrementCounter = () => {
       this.setState((prevState) => {
-        return { count: prevState.count + 1 };
+        return { count: prevState.count + incrementNo };
       });
     };
 
     render() {
+      console.log(this.props); // props passed by App is received by HOC -> pass down to Wrapped Component so the original comp can use it
       // render JSX within new enhanced component
       return (
         <WrappedComponent
           count={this.state.count}
           incrementCounter={this.incrementCounter}
+          {...this.props}
         ></WrappedComponent>
       );
     }

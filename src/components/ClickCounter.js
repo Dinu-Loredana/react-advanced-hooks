@@ -3,10 +3,15 @@ import withCounter from "../HOC/withCounter";
 
 class ClickCounter extends Component {
   render() {
-    const { count, incrementCounter } = this.props;
-    return <button onClick={incrementCounter}>Clicked {count} times</button>;
+    const { count, incrementCounter, randomProps } = this.props;
+    return (
+      <button onClick={incrementCounter}>
+        {randomProps}
+        Clicked {count} times
+      </button>
+    );
   }
 }
 
 // export the enhanced component
-export default withCounter(ClickCounter);
+export default withCounter(ClickCounter, 5);

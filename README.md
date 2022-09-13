@@ -5,7 +5,15 @@
 - to share common functionality (logic) between components; generally used when multiple components use a common logic
 - a function that takes a React component as input and returns an enhanced version of it as output component. It builds up on the principle of higher order functions in JavaScript: A function that returns a function. It typically adds extra logic (adds functionality) to return a new enhanced component
 - naming convension for HOC: use the prefix with (same as a React Hook comes always with the prefix use), use camelCase for the name (e.g. withCounter)
--
+- pass props to HOC - if a parent comp pass some data via props to a child compon which is wrapped by HOC, the HOC will receive the props; pass down the props to the WrappedComp, so the original comp can use the props
+- pass paramenters to HOC - HOC function can receive as arguments the original component and other paramater that adds functionality - use it within hoc logic; in the place where HOC is used pass besides the wrapped component, also the othet parameter needed for the functionality
+  );
+
+Info:
+https://www.robinwieruch.de/react-higher-order-components/
+https://www.youtube.com/watch?v=B6aNv8nkUSw
+https://www.youtube.com/watch?v=rsBQj6X7UK8
+https://www.youtube.com/watch?v=l8V59zIdBXU
 
 ### useRef hook
 
