@@ -1,5 +1,24 @@
 # Notes
 
+### Error Boundary
+
+- is a React CLASS component that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed (have an error message instead of white screen)
+- a special component that you write to handle runtime errors
+- error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
+- error boundaries work like a JavaScript catch {} block, but for components.
+- only catch errors in the components below them in the tree. An error boundary can’t catch an error within itself.
+- you may wrap top-level route components to display a “Something went wrong” message to the user
+- you may also wrap individual widgets in an error boundary to protect them from crashing the rest of the application or any part of the application
+- feature of React v16, but it needs to be written as class component
+- doesn't catch errors for: event handlers, asynch code, errors thrown in the error boundary itself (rather than its children), server-side rendering
+  ==> solution: react-error-boundary package: https://github.com/bvaughn/react-error-boundary
+- for a component to be an Error Boundary:
+  --- it must be a class component
+  --- it must implement both or either:
+  ===> getDerivedStateFromError (to render a fallback UI after an error has been thrown, returns a new state, based on the error caught)
+  ===> componentDidCatch (called whenever an error occurs, you can log the error (and any extra information) to your favorite error reporting service, try to recover from the error, and whatever else you need to do.
+  More: https://www.youtube.com/watch?v=hszc3T0hdvU
+
 ### HOC (Higher Order Component)
 
 - to share common functionality (logic) between components; generally used when multiple components use a common logic

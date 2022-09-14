@@ -23,7 +23,7 @@ const withCounter = (WrappedComponent, incrementNo) => {
 
     render() {
       console.log(this.props); // props passed by App is received by HOC -> pass down to Wrapped Component so the original comp can use it
-      // render JSX within new enhanced component
+      // render JSX with the input component and enhance it
       return (
         <WrappedComponent
           count={this.state.count}
