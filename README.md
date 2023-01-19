@@ -70,6 +70,9 @@ https://www.youtube.com/watch?v=l8V59zIdBXU
 - if your component renders the same result given the same props, you can wrap it in a call to React.memo for a performance boost in some cases by memoizing the result.
 - React will skip rendering the component, and reuse the last rendered result.
 - only checks for prop changes. If your function component wrapped in React.memo has a useState, useReducer or useContext Hook in its implementation, it will still rerender when state or context change.
+- useful for the component which has a lot of photos or charts because this component has a high stress to re-rende
+
+## Note: useCallback, useMemo, React.memo - used for optimization.
 
 ### Custom Hooks
 
